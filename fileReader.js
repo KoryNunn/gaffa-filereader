@@ -8,18 +8,19 @@ FileReader = Gaffa.createSpec(FileReader, Gaffa.Action);
 
 FileReader.prototype.type = 'fileReader';
 FileReader.prototype.trigger = function(){
+    this.__super__.trigger.apply(this, arguments);
+
     var action = this,
-        reader = new FileReader();
+        reader = new window.FileReader();
 
-    reader.onload = (function(file) {
-        return function(event) {
-            action.target.set(event.target.result);
-        };
-    })(f);
+    reader.onload = function(event) {
+        action.target.set(event.target.result);
+    };
 
-    reader.readAsDataURL(this.source.value);
+    reader['readAs' + (this.readAsType.value || 'Text')](this.source.value);
 };
 FileReader.prototype.source = new Gaffa.Property();
 FileReader.prototype.target = new Gaffa.Property();
+FileReader.prototype.readAsType = new Gaffa.Property();
 
 module.exports = FileReader;
