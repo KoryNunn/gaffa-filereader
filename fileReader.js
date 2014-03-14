@@ -8,8 +8,6 @@ FileReader = Gaffa.createSpec(FileReader, Gaffa.Action);
 
 FileReader.prototype.type = 'fileReader';
 FileReader.prototype.trigger = function(){
-    this.__super__.trigger.apply(this, arguments);
-
     var action = this,
         reader = new window.FileReader();
 

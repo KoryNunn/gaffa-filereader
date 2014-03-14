@@ -1,13 +1,13 @@
 {
   "name": "gaffa-filereader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A file reader action for Gaffa.",
   "main": "fileReader.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "gaffa": "0.x.x"
+    "gaffa": "^1.0.1"
   },
   "author": "",
   "license": "BSD"
