@@ -10,5 +10,14 @@
     "gaffa": "^1.0.1"
   },
   "author": "",
-  "license": "BSD"
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/gaffa-filereader.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/KoryNunn/gaffa-filereader/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/gaffa-filereader#readme"
 }
